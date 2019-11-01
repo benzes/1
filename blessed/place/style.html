@@ -1,0 +1,75 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="{% static 'shet.css' %}">
+	
+
+	<title> blessed </title>
+
+</head>
+
+<body>
+	<div class="jumbotron text-center bg-dark">
+		<span style="color: #ff5005;">
+			
+		    <h3> blessed.com </h3>
+		   
+		    <p class="teg"> Learn </p>
+		    <p class="teg"> Comments </p>
+		     <p class="teg"> Asks <p>
+
+		</span>
+	
+	</div>
+
+	<div class="container-1">
+		<div class="box-1">
+			<h3 align="center"> posts for all users: </h3>
+			<div class="container-in-1">
+				<span style="color: white; font-family: sans-serif;">
+					
+				
+				    {% for PostProd in page %}
+				        
+				            <h1 style="text-shadow: 3px 2px 2px black">{{ PostProd.title }}</h1>
+				            <h5 style="text-shadow: 3px 2px 2px black">Тип: {{ PostProd.typecontent }}</h5>
+				            <p>{{ PostProd.content }}</p>
+				            <p>{{PostProd.datetoo}}</p>
+				            <a href="#" style="color: white">Likes: {{ PostProd.like}}</a>
+				            <a href="#" style="color: white">Dislikes: {{ PostProd.dislike}}</a>
+
+				      
+				    {% endfor %}
+				</span>
+
+				
+					
+			</div>
+				}
+
+			
+		</div>
+
+		<div class="box-2">
+			
+			<h3 align="center"> posts for moderation: </h3>
+			
+		</div>
+		
+	</div>
+
+
+
+
+
+
+
+</body>
+
+</html>
